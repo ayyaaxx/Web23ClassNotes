@@ -1,0 +1,86 @@
+<!-- Declare HTML doctype for file -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Character set attribute specifies character encoding.
+    Failure to state this may result in malformed font characters -->
+    <meta charset="utf-8" />
+    <!-- viewport metatag is required for proper responsive rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Title tag is the first thing you see as google search result and the title in the broswer tab -->
+    <title>HTML Elements</title>
+    <meta
+      name="description"
+      content="this is the descriptiontag, this will show as the text under the title "
+    />
+    <meta name="keywords" content="HTML, CSS, tutorial" />
+    <meta name="author" content="your name here" />
+  </head>
+  <body>
+    <!-- There should only ever be one heading 1 per page. This should title the page. Google search -->
+    <h1 id="top">Hello, world!</h1>
+    <h2>Hello, world!</h2>
+    <h3>Hello, world!</h3>
+    <h4>Hello, world!</h4>
+    <h5>Hello, world!</h5>
+    <h6>Hello, world!</h6>
+    <p>
+      This is a page with some <em> basic HTML </em> elements. We will update
+      and add as we <strong> progress </strong> in this lesson
+    </p>
+    <!-- there are some tags that are self closing like br and hr and img -->
+    <hr />
+    <p>
+      Some text to insert <br />
+      a break tag into.
+    </p>
+
+    <!-- ordered lists -->
+    <ol>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ol>
+
+    <!-- unordered lists -->
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul>
+
+    <!-- we can also nest lists -->
+    <ol>
+      <li>item 1</li>
+      <li>
+        item 2
+        <ul>
+          <li>sub item 1</li>
+          <li>sub item 2</li>
+          <li>sub item 3</li>
+        </ul>
+      </li>
+      <li>item 3</li>
+    </ol>
+
+    <!-- we can link to external pages or websites -->
+    <a href="https://downshiftology.com/recipes/garlic-roasted-potatoes/" target="_blank">Link to Linkedin</a>
+    <br>
+    <a href="https://downshiftology.com/recipes/garlic-roasted-potatoes/" target="_self">Link to Linkedin</a>
+
+    <!-- we can also to other areas by ID on our page  -->
+    <br>
+    <a href="#top">Back to top</a>
+    <!-- we can load images from the browser -->
+    <br>
+    <img src="https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/01/Garlic-Roasted-Potatoes-8.jpg"width="300px"/>
+
+    <!-- load a image from our website image directory -->
+    <img src="/Users/aya/Downloads/WebDevFall23/Week02/HTML/In_Class_Exercise/img/Garlic-Roasted-Potatoes-4.webp"
+    width="300px"
+    title="Garlic and Herb Potatoes"
+    alt = "garling and herb potatoes on a pan sheet"
+    />
+  </body>
+</html>
