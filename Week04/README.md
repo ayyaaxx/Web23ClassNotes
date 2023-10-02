@@ -1,25 +1,22 @@
 # HW - Due Monday, Week 5
 
-Next week you will be presenting you midterm project proposals to your classmates. Plan on showing a README.md post and optional slideshow (or combination of the 2) describing a simple multipage (minimum of 3 pages) website. README.md post / slideshow should include:
+Concept: I plan on creating a website that inspires people of new fashion trends, pieces, and ideas. It's similar to a lookbook where different outfits are put togehter based off everyday wear, designer shows, and fun looks to replicate. Most of the outfits come from pinterest or seasonal fashion shows. It'll provide looks that are categorized by season giving endless efforts to be of daily use. 
 
-* concept|theme of site (not just random images and links that show skill)
-* site map  and wireframes
-* an existing website you drew inspiration from (bonus points for pinterest collection or mood board)
-* concepts|skills we have covered that you will use to build your site
-* concepts|skills you need to still learn to complete the project
+Mind Map 
+![Site map](MindMapSite.png)
 
-## Examples
-These examples are from previous students that properly documented thier midterms and final projects. 
+Wireframes:<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FVQfCfbSkj5cdvEnG56vJ5k%2FMidterm-Website%3Ftype%3Ddesign%26node-id%3D1669%253A162202%26mode%3Ddesign%26t%3DrTbG1maRLHZtgaef-1" allowfullscreen></iframe>
 
-[Example Midterm Proposal](http://sites.bxmc.poly.edu/~isabellaweaver/webdev/?p=9)
 
-[Example Midterm Documentation](https://samantascreations.com/2015/10/25/midterm-presentation/)
+[Pinterest Board:](https://www.pinterest.com/ayyaaxx/webfashionvisionboard/)
 
-### Here are a few useful resources to help with inspiration:
+[Website Inspirations:](https://thommorison.com/)
+[Website Inspirations:](https://www.incu.com/)
+[Website Inspirations:](https://www.us.rains.com/)
+[Website Inspirations:](https://www.loewe.com/usa/en/stories-collection/ss24-women-runway.html)
+[Website Inspirations:](https://www.vogue.fr/fashion/galerie/fashion-trends-fall-winter-2022-2023)
 
-* [UX Inspiration Source Article](http://mediatemple.net/blog/tips/top-seven-sites-for-ux-inspiration/?utm_source=weekly_newsletter&utm_medium=email&utm_content=kylie_img&utm_campaign=02092016_newsletter&j=50758766&e=katieadee@gmail.com&l=32460871_HTML&u=372480720&mid=10825691&jb=49)
-* [CSS Color Keywords Explained](http://www.w3schools.com/cssref/css_colors.asp)
-* [HTML Color Picker](http://www.w3schools.com/colors/colors_picker.asp)
-* [Paletton - Color Palette Tool](http://paletton.com)
+Concepts: I have learned the signifance of positoning and repositioning to scale for different UX whether it's laptop, pc, iphone, ipad, etc. I always enjoyed learning differnt CSS styling techniques like display grid and flex to allign different html tags.
 
+Concepts I still need to learn a dropdown menu for my nav bar, creating animations with css, and better equip myself with the color pallete that will fit the theme of the website. 
 
