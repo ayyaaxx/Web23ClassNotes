@@ -1,11 +1,11 @@
 # HW - Due Monday, Week 5
 
-Concept: I plan on creating a website that inspires people of new fashion trends, pieces, and ideas. It's similar to a lookbook where different outfits are put togehter based off everyday wear, designer shows, and fun looks to replicate. Most of the outfits come from pinterest or seasonal fashion shows. It'll provide looks that are categorized by season giving endless efforts to be of daily use. 
+Concept: I plan on creating a website that inspires people of new fashion trends, pieces, and ideas. It's similar to a lookbook where different outfits are put together based off everyday wear, designer shows, and fun looks to replicate. Most of the outfits come from pinterest or seasonal fashion shows. It'll provide looks that are categorized by season giving endless efforts to be of daily use. 
 
 Mind Map 
 ![Site map](MindMapSite.png)
 
-[Wireframe]](https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FVQfCfbSkj5cdvEnG56vJ5k%2FMidterm-Website%3Ftype%3Ddesign%26node-id%3D1669%253A162202%26mode%3Ddesign%26t%3DrTbG1maRLHZtgaef-1)
+[Wireframe](https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FVQfCfbSkj5cdvEnG56vJ5k%2FMidterm-Website%3Ftype%3Ddesign%26node-id%3D1669%253A162202%26mode%3Ddesign%26t%3DrTbG1maRLHZtgaef-1)
 
 
 [Pinterest Board](https://www.pinterest.com/ayyaaxx/webfashionvisionboard/)
