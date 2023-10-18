@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* html {
+  background: url(../img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+/*If you want it to work in IE*/
+/* filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+} */
+
+/* NAVIGATION */
+
+
+
+
+.headers a{
+  text-decoration:none ;
+  color: rgb(68, 124, 68); 
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-bottom: 2px solid #6d6b6b;
+}
+
+.question {
+  font-family: "Spartan", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  position: relative;
+  color: #5c5a5a;
+}
+
+.icon-main {
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+}
+
+.non-active {
+  display: none;
+}
+
+.answer {
+  font-size: 17px;
+  font-family: "Spartan", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 0 10%;
+  height: 50px;
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+  /* background-image: url("../img/tweed.png"); */
+}
+
+header h1 {
+  /* display: inline-block; */
+  color: black;
+  /* font-family: 'Shadows Into Light', cursive; */
+  /* font-family: 'Schoolbell', arial, serif;  */
+  font-family: 'Indie Flower', cursive;
+}
+
+/* nav ul{
+    list-style-type: none;
+    text-align: center;
+    background-color: rgba(40,40,40,0.1);
+    font-size: 0;
+}
+
+nav a{
+    text-decoration: none;
+    color:floralwhite;
+    display: block;
+    transition: all 1s;
+    line-height: 50px;
+}
+
+nav a:hover{
+    color: rgb(217, 32, 69);
+}
+
+nav li{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1.25rem;
+    height: 50px;
+    width: 120px;
+    display: inline-block;
+} */
+
+.navbar {
+    background-color: white;
+    overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  font-size: 20px;
+  /* font-family: 'Schoolbell', arial, serif; */
+  /* font-family: 'Shadows Into Light', cursive; */
+  font-family: 'Indie Flower', cursive;
+  color: black;
+  text-align: center;
+  padding: 16px 40px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* style the lookbook button */
+.dropdown .dropbtn {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 10px 16px;
+  background-color: inherit;
+  /* font-family: 'Schoolbell', arial, serif; */
+  /* font-family: 'Shadows Into Light', cursive; */
+  font-family: 'Indie Flower', cursive;
+
+  margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: green;
+}
+
+/* styles the dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* styles the text in the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.landingImg{
+  display: flex;
+  background-color:#F6E8DA;
+  width: 100%;
+  height: 950px;
+  padding-top: 10px;
+  justify-content: center;
+}
+
+.faqcontainer {
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+
+.container {
+  position: absolute;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  transform: translate(20%, -10%);
+  width: 100%;
+
+}
+
+.polaroid {
+  position: relative;
+  width: 190px;
+  display: inline-block;
+  margin: 20px;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  border: 10px solid #fef9ef;
+  border-bottom: 45px solid #fef9ef;
+  /*h-shadow v-shadow | blur spread color*/
+  -webkit-box-shadow: 3px 3px 3px 3px rgba(10, 10, 10, 0.5);
+  -moz-box-shadow: 3px 3px 3px 3px rgba(10, 10, 10, 0.5);
+  box-shadow: 3px 3px 3px 3px rgba(10, 10, 10, 0.5);
+}
+
+.polaroid p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 10px;
+  font: 400 18px "Kaushan Script", cursive;
+  color: #888;
+}
+
+/* TRANSFORMS */
+
+.rotate-left,
+.scaleUniform,
+.scaleX,
+.scaleY,
+.skewX,
+.skewY {
+  translate: all 2s ease-in-out;
+}
+
+.rotate-left {
+  transform: rotate(-10deg);
+  transform-origin: 50% 50%;
+}
+
+.rotate-left:hover {
+  transform: rotate(10deg);
+}
+
+.scale2x {
+  transform: scale(2);
+  z-index: 20;
+}
+
+.scaleX {
+  transform: scale(2, 1);
+}
+
+.skewX {
+  transform: skewX(20deg);
+}
+
+.skewY {
+  transform: skewY(20deg);
+}
+
+.skewBoth {
+  transform: skew(-45deg, 4deg);
+}
+
+.rotX {
+  transform: rotateX(45deg);
+}
+
+.rotY {
+  transform: rotateY(45deg);
+}
+
+.rotZ {
+  transform: rotateZ(45deg);
+}
