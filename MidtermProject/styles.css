@@ -13,37 +13,6 @@ h1 {
   font-size: 40px;
 }
 
-/* /* li {
-  list-style: none;
-  margin-bottom: 10px;
-  padding: 15px;
-  border-bottom: 2px solid #6d6b6b;
-} */
-
-/* .question {
-  font-family: "Spartan", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  position: relative;
-  color: #5c5a5a;
-}
-
-.icon-main {
-  position: absolute;
-  right: 0px;
-  cursor: pointer;
-}
-
-.non-active {
-  display: none;
-}
-
-.answer {
-  font-size: 17px;
-  font-family: "Spartan", sans-serif;
-} */
-
 .layout {
   width: 600px;
   margin: auto;
@@ -63,7 +32,6 @@ h1 {
   font-size: 20px;
   background-color: rgb(221, 200, 200);
   border-radius: 30px;
-  /* border: 2px solid black;  */
 }
 
 .accordion__answer p {
@@ -128,7 +96,6 @@ header h1 {
   color: black;
   padding: 10px 16px;
   background-color: rgb(112, 97, 97);
-  /* font-family: 'Schoolbell', arial, serif; */
   font-family: "Indie Flower", cursive;
   margin: 0;
 }
@@ -339,41 +306,18 @@ footer {
   transform: rotateY(0deg);
 } */
 
+/* .curled-page {
+  transform: rotateY(-10deg);
+  transition: transform 0.5s; 
+} */
+
+
+
 .SeasonalSeparator {
   height: 2px;
   background-color: #333;
   margin-top: 20px;
 }
-
-/* h2 {
-  font-family: "Indie Flower", cursive;
-  margin-top: 60px;
-  margin-bottom: 150px;
-  border: 2px solid black;
-  font-size: 40px;
-} */
-
-/* Right */
-/* .RightSeasonalContainer {
-  text-align: center; 
-  padding: 20px; 
-}
-
-.RightSeasonalContent {
-  font-family: "Indie Flower", cursive;
-  font-size: 30px;
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-}
-
-
-.RightSeasonalImg img {
-  margin-right: 180px;
-  width: 350px;
-  height: 450px;
-  flex: 1;
-} */
 
 .RightSeasonalContainer {
   text-align: center;
@@ -427,6 +371,56 @@ footer {
   flex: 1;
 }
 
+.slider {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;  /* <===  */
+  border-radius: 15px;
+}
+
+.slide {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+.btn:active {
+  transform: scale(1.1);
+}
+
+.btn-prev {
+  top: 45%;
+  left: 2%;
+}
+
+.btn-next {
+  top: 45%;
+  right: 2%;
+}
+
 @media only screen and (max-width: 1024px) {
 
   .missionContainer{
@@ -446,7 +440,6 @@ footer {
 @media screen and (max-width: 768px) {
 
   .missionContainer{
-    /* flex-direction: column; */
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
