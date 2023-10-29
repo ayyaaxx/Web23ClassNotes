@@ -13,14 +13,14 @@ h1 {
   font-size: 40px;
 }
 
-li {
+/* /* li {
   list-style: none;
   margin-bottom: 10px;
   padding: 15px;
   border-bottom: 2px solid #6d6b6b;
-}
+} */
 
-.question {
+/* .question {
   font-family: "Spartan", sans-serif;
   font-size: 20px;
   font-weight: 600;
@@ -42,6 +42,47 @@ li {
 .answer {
   font-size: 17px;
   font-family: "Spartan", sans-serif;
+} */
+
+.layout {
+  width: 600px;
+  margin: auto;
+}
+.accordion {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* background: rgb(105, 206, 105);  */
+  border-radius: 10px;
+}
+
+.accordion__question p {
+  margin: 5px;
+  padding: 15px;
+  font-family: Verdana;
+  font-size: 20px;
+  background-color: rgb(221, 200, 200);
+  border-radius: 30px;
+  /* border: 2px solid black;  */
+}
+
+.accordion__answer p {
+  margin: 5px;
+  padding: 10px;
+  font-size: large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(255, 255, 255);
+  background: rgb(135, 117, 117);
+  border-radius: 10px;
+}
+.accordion:hover {
+  cursor: pointer;
+}
+.accordion__answer {
+  display: none;
+}
+.accordion.active .accordion__answer {
+  display: block;
 }
 
 header {
@@ -49,11 +90,9 @@ header {
   justify-content: space-between;
   width: 80%;
   padding: 0 10%;
-  /* height: 50px; */
   position: fixed;
   z-index: 100;
   background-color: rgb(112, 97, 97);
-  /* border: 2px solid rgb(152, 151, 151);   */
 }
 
 header h1 {
@@ -133,6 +172,17 @@ header h1 {
   padding-bottom: 100px;
 }
 
+h2 {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 10px;
+  font-family: "Indie Flower", cursive;
+  font-size: 40px;
+  border: 2px solid black;
+  
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -149,7 +199,7 @@ header h1 {
 
 .polaroid img {
   width: 250px;
-  height: 450px;
+  height: 350px;
   border: 20px solid #fef9ef;
   border-bottom: 60px solid #fef9ef;
   -webkit-box-shadow: 3px 3px 3px 3px rgba(10, 10, 10, 0.5);
@@ -174,20 +224,20 @@ header h1 {
 }
 
 .browsebtn {
-  border: 2px solid #e0e0e0; 
-  background-color: rgb(129, 162, 129); 
-  border-radius: 10px; 
-  text-align: center; 
-  padding: 10px; 
-  width: 500px; 
-  margin: 0 auto;  
+  border: 2px solid #e0e0e0;
+  background-color: rgb(129, 162, 129);
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  width: 500px;
+  margin: 0 auto;
   font-family: "Indie Flower", cursive;
-  font-size: 30px; 
+  font-size: 30px;
 }
 
 .browsebtn p {
-  margin: 0; 
-  padding: 5px; 
+  margin: 0;
+  padding: 5px;
 }
 
 .rotate-left {
@@ -204,23 +254,23 @@ header h1 {
 
 .separator {
   border-top: 3px solid #1c1a1a;
-  margin: 90px 0; 
+  margin: 90px 0;
 }
 
 .missionContainer {
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: space-between;
-  max-width: 1200px; 
+  max-width: 1200px;
   margin: 0 auto;
   margin-top: 7%;
 }
 
 .missionStatement {
-  width: 1200px; 
-  text-align: right; 
+  width: 1200px;
+  text-align: right;
   font-family: "Indie Flower", cursive;
-  font-size: 40px; 
+  font-size: 40px;
   white-space: nowrap;
   margin-bottom: 15%;
 }
@@ -233,15 +283,15 @@ header h1 {
 .missionParagraph p {
   font-family: "Indie Flower", cursive;
   text-align: left;
-  font-size: 20px; 
+  font-size: 20px;
   margin-left: 15%;
 }
 
 footer {
-  background-color: #315871; 
-  color: white; 
-  padding: 20px 0; 
-  text-align: center; 
+  background-color: #315871;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
   width: 100%;
 }
 
@@ -289,25 +339,24 @@ footer {
   transform: rotateY(0deg);
 } */
 
-
 .SeasonalSeparator {
-  height: 2px; 
-  background-color: #333; 
-  margin-top: 20px; 
+  height: 2px;
+  background-color: #333;
+  margin-top: 20px;
 }
 
-/* Right */
-
-.RightSeasonalContainer {
-  text-align: center; 
-  padding: 20px; 
-}
-
-h2 {
+/* h2 {
   font-family: "Indie Flower", cursive;
-  margin-top: 60px; 
+  margin-top: 60px;
   margin-bottom: 150px;
   border: 2px solid black;
+  font-size: 40px;
+} */
+
+/* Right */
+/* .RightSeasonalContainer {
+  text-align: center; 
+  padding: 20px; 
 }
 
 .RightSeasonalContent {
@@ -318,21 +367,43 @@ h2 {
   justify-content: center; 
 }
 
-p {
+
+.RightSeasonalImg img {
+  margin-right: 180px;
+  width: 350px;
+  height: 450px;
   flex: 1;
+} */
+
+.RightSeasonalContainer {
+  text-align: center;
   padding: 20px;
+
+}
+
+.RightSeasonalContent p{
+  margin: 12px 100px;
+}
+
+.RightSeasonalContent {
+  font-family: "Indie Flower", cursive;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
 }
 
 .RightSeasonalImg img {
-  padding-right: 300px;
-  width: 300px;
-  height: 400px;
+  margin-right: 200px;
+  width: 350px;
+  height: 450px;
   flex: 1;
 }
 
 /* Left */
 .LeftSeasonalContainer {
-  text-align: center; 
+  text-align: center;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -343,31 +414,72 @@ p {
   font-family: "Indie Flower", cursive;
   font-size: 30px;
   flex: 1;
-  margin-right: 20px; 
+  margin-right: 20px;
+}
+.LeftSeasonalContent p{
+  margin: 12px 100px;
 }
 
 .LeftSeasonalImg img {
   margin-left: 200px;
-  width: 300px;
-  height: 400px;
+  width: 350px;
+  height: 450px;
   flex: 1;
 }
 
-@media only screen and (min-width: 760px) and (max-width: 1024px) {
-  body {
-    background-color:rgb(184, 184, 133);
-  }
+@media only screen and (max-width: 1024px) {
 
-  .flex-container {
-    max-width: 1024px;
+  .missionContainer{
     flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
   }
-
-
+  .missionStatement{
+    text-align: center;
+  }
+  .missionParagraph p{
+    margin: 12px  14px;  }
 }
 /* Mobile Screen sizez   */
-@media only screen and (max-width: 767px) {
-  body {
-      background-color: yellow;
+
+@media screen and (max-width: 768px) {
+
+  .missionContainer{
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .missionStatement{
+    text-align: center;
+  }
+  .missionParagraph p{
+    margin: 12px  14px;
+  }
+
+  .LeftSeasonalContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .LeftSeasonalContent {
+    margin-top: 20px; /* Add margin to push the text below the image */
+    text-align: center;
+    align-items: center;
+  }
+  .LeftSeasonalImg img {
+    margin-left: 0;
+  }
+
+  .RightSeasonalImg img {
+    margin-right: 0;
+  }
+
+  .RightSeasonalContent {
+    text-align: center;
+    margin-top: 20px; 
+    flex-direction: column;
+    align-items: center;
   }
 }

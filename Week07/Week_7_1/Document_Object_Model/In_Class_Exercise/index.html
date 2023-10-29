@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document Object Model</title>
+  </head>
+  <body>
+    <button onclick="addSingleP()">Add a single P using strings</button>
+    <button onclick="addMultiP(9)">
+      Add multiple Ps the right way using DOM nodes
+    </button>
+    <div id="content">
+      <p>This is DOM dummy text that will be overwritten by innerHTML</p>
+    </div>
+    <script type="text/javascript">
+      // declare our content variable globally
+      const content = document.getElementById("content");
+      // this will work globally because the script tag is after the body content
+      function addSingleP() {
+        content.innerHTML =
+          '<p>This is a poorly instantiated p tag using string trickery!</p>';
+      }
+
+      //proper dynamic DOM
+      function addMultiP(num) {
+        // start our loop
+        for (var i = 0; i < num; i++) {
+          var p = document.createElement('P');
+          // p = <p></p>
+          // create a text node to go inside our p node.
+          var text = document.createTextNode(
+            "this is paragraph number" + (i + 1)
+          );
+          p.appendChild(text);
+          //append the P to our content div
+          content.appendChild(p);
+        }
+      }
+    </script>
+  </body>
+</html>

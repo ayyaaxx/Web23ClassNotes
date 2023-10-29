@@ -1,25 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Schoolbell&v1"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>FAQs</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Shadows+Into+Light&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles.css" />
-    <title>FAQs</title>
   </head>
   <header>
     <div class="headers">
@@ -28,9 +15,10 @@
     <div class="navbar">
       <a href="../Home/index.html">Home</a>
       <a href="./faq.html">FAQ</a>
+      <a href="../Book/book.html">LookBook</a>
       <div class="dropdown">
         <button class="dropbtn">
-          LookBook
+          FashionLooks
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
@@ -42,64 +30,51 @@
       </div>
     </div>
   </header>
-
   <body>
     <div class="faqcontainer">
       <h1>FAQs</h1>
-      <ul>
-        <li class="faq">
-          <div class="question">
-            How do I navigate through seasons?
-            <span class="icon-main">
-              <i class="fa-solid fa-plus"></i>
-            </span>
+
+      <div class="layout">
+        <div class="accordion">
+          <div class="accordion__question">
+            <p>How do I navigate through seasons?</p>
           </div>
-          <div class="answer non-active">
-            GeeksforGeeks is the best Computer Science portal for geeks. It
-            contains well written, well thought and well explained computer
-            science and programming articles.
+          <div class="accordion__answer">
+            <p>
+              Click on one of the looks located on the home page and be directed
+              to your seasonal wear! You can also naviagte to the different
+              seasons through the navbar section where it says 'lookbook' and
+              you will be met with a dropsown menu of seasons!
+            </p>
           </div>
-        </li>
-        <li class="faq">
-          <div class="question">
-            What is a FAQ section?
-            <span class="icon-main">
-              <i class="fa-solid fa-plus"></i>
-            </span>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion__question">
+            <p>Where do the looks come from?</p>
           </div>
-          <p class="answer non-active">
-            the Frequently Asked Questions (FAQ) section is a part of your
-            website where you address common concerns, questions,and objections
-            that customers have.
-          </p>
-        </li>
-        <li class="faq">
-          <div class="question">
-            Where can I find summer looks?
-            <span class="icon-main">
-              <i class="fa-solid fa-plus"></i>
-            </span>
+
+          <div class="accordion__answer">
+            <p>
+              Most of the looks are brought to you through pinterest! You can
+              see this was to encourage fun looks and bring inspiration to your
+              clothing palete.
+            </p>
           </div>
-          <p class="answer non-active">
-            Fully answer the question, don't just link to a different page.
-          </p>
-        </li>
-      </ul>
-    </div>
-    <script>
-      const faqs = document.querySelectorAll(".faq");
-      for (const item of faqs) {
-        const curr_faq = item.childNodes;
-        const question = curr_faq[1];
-        const answer = curr_faq[3];
-        const icon = question.querySelector(".icon-main");
-        icon.addEventListener("click", function () {
-          answer.classList.toggle("non-active");
-          const i = icon.querySelector("i");
-          i.classList.toggle("fa-xmark");
-          i.classList.toggle("fa-plus");
+        </div>
+      </div>
+      <script>
+        let answers = document.querySelectorAll(".accordion");
+        answers.forEach((event) => {
+          event.addEventListener("click", () => {
+            if (event.classList.contains("active")) {
+              event.classList.remove("active");
+            } else {
+              event.classList.add("active");
+            }
+          });
         });
-      }
-    </script>
+      </script>
+    </div>
   </body>
 </html>
