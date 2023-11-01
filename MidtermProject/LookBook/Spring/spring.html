@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const book = document.querySelector('.book');
-
-            book.addEventListener('click', function () {
-                const page1 = document.querySelector('.page1');
-                const page2 = document.querySelector('.page2');
-                if (page1.classList.contains('curled-page')) {
-                    page1.classList.remove('curled-page');
-                    page2.classList.add('curled-page');
-                } else {
-                    page1.classList.add('curled-page');
-                    page2.classList.remove('curled-page');
-                }
-            });
-        });
-    </script> -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE" />
     <link
@@ -44,7 +27,7 @@
       <div class="navbar">
         <a href="../../Home/index.html">Home</a>
         <a href="../../FAQ/faq.html">FAQ</a>
-        <a href="/MidtermProject/Book/book.html">LookBook</a>
+        <a href="../../Book/book.html">LookBook</a>
         <div class="dropdown">
           <button class="dropbtn">
             FashionLooks
@@ -60,6 +43,12 @@
       </div>
     </header>
     <h2>Fall in love with Spring Looks</h2>
+    <div class="switch">
+      <label for="title">
+        <b>Switch to redirect:</b>
+        <button id="switchButton">Winter</button>
+      </label>
+    </div>
     <div class="RightSeasonalContainer">
       <div class="RightSeasonalContent">
         <p>
@@ -118,5 +107,20 @@
     <footer>
       <p>Copyright © 2017 All Rights Reserved by Aya Elfettahi.</p>
     </footer>
+    <script type="text/javascript">
+      var isSwitchOn = false; // Initialize the state
+
+      document
+        .getElementById("switchButton")
+        .addEventListener("click", function () {
+          isSwitchOn = !isSwitchOn; // Toggle the state
+
+          if (isSwitchOn) {
+            window.location = "../../LookBook/Winter/winter.html";
+          } else {
+            window.location = "index.html";
+          }
+        });
+    </script>
   </body>
 </html>

@@ -42,7 +42,15 @@
         </div>
       </div>
     </header>
+
     <h2>Fall in love with Fall Looks</h2>
+    <div class="switch">
+      <label for="title">
+        <b>Switch to redirect:</b>
+        <button id="switchButton">Spring</button>
+      </label>
+    </div>
+
     <div class="RightSeasonalContainer">
       <div class="RightSeasonalContent">
         <p>
@@ -53,18 +61,14 @@
           energy.
         </p>
         <div class="RightSeasonalImg">
-          <img
-            src="../Fall/FallImg/fall1.png"
-          />
+          <img src="../Fall/FallImg/fall1.png" />
         </div>
       </div>
       <div class="SeasonalSeparator"></div>
     </div>
     <div class="LeftSeasonalContainer">
       <div class="LeftSeasonalImg">
-        <img
-          src="../Fall/FallImg/Fall2.png"
-        />
+        <img src="../Fall/FallImg/Fall2.png" />
       </div>
       <div class="LeftSeasonalContent">
         <p>
@@ -87,18 +91,14 @@
           denim while offering a touch of femininity and sophistication.
         </p>
         <div class="RightSeasonalImg">
-          <img
-            src="../Fall/FallImg/Fall6.png"
-          />
+          <img src="../Fall/FallImg/Fall6.png" />
         </div>
       </div>
       <div class="SeasonalSeparator"></div>
     </div>
     <div class="LeftSeasonalContainer">
       <div class="LeftSeasonalImg">
-        <img
-          src="../Fall/FallImg/IMG_2421.JPG"
-        />
+        <img src="../Fall/FallImg/IMG_2421.JPG" />
       </div>
       <div class="LeftSeasonalContent">
         <p>
@@ -113,5 +113,20 @@
     <footer>
       <p>Copyright © 2017 All Rights Reserved by Aya Elfettahi.</p>
     </footer>
+    <script type="text/javascript">
+      var isSwitchOn = false; // Initialize the state
+
+      document
+        .getElementById("switchButton")
+        .addEventListener("click", function () {
+          isSwitchOn = !isSwitchOn; // Toggle the state
+
+          if (isSwitchOn) {
+            window.location = "../../LookBook/Spring/Spring.html";
+          } else {
+            window.location = "index.html";
+          }
+        });
+    </script>
   </body>
 </html>

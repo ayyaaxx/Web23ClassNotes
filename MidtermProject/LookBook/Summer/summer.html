@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const book = document.querySelector('.book');
-
-            book.addEventListener('click', function () {
-                const page1 = document.querySelector('.page1');
-                const page2 = document.querySelector('.page2');
-                if (page1.classList.contains('curled-page')) {
-                    page1.classList.remove('curled-page');
-                    page2.classList.add('curled-page');
-                } else {
-                    page1.classList.add('curled-page');
-                    page2.classList.remove('curled-page');
-                }
-            });
-        });
-    </script> -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE" />
     <link
@@ -44,7 +27,7 @@
       <div class="navbar">
         <a href="../../Home/index.html">Home</a>
         <a href="../../FAQ/faq.html">FAQ</a>
-        <a href="/MidtermProject/Book/book.html">LookBook</a>
+        <a href="../../Book/book.html">LookBook</a>
         <div class="dropdown">
           <button class="dropbtn">
             FashionLooks
@@ -59,16 +42,13 @@
         </div>
       </div>
     </header>
-    <!-- <div class="book">
-        <div class="page page1">
-           <img src="/Users/aya/Downloads/WebDevFall23/MidtermProject/Img/fall1.png"/>
-        </div>
-        <div class="page page2">
-            <p>wefkwjefnkjwbkebglejqhbfljqhberghqbek</p>
-        </div>
-    </div> -->
     <h2>Fall in love with Summer Looks</h2>
-
+    <div class="switch">
+      <label for="title">
+        <b>Switch to redirect:</b>
+        <button id="switchButton">Fall</button>
+      </label>
+    </div>
     <div class="RightSeasonalContainer">
       <div class="RightSeasonalContent">
         <p>
@@ -77,18 +57,14 @@
           consumers to infuse their wardrobes with a fun addition
         </p>
         <div class="RightSeasonalImg">
-          <img
-            src="../Summer/SummerImg/Summer1.png"
-          />
+          <img src="../Summer/SummerImg/Summer1.png" />
         </div>
       </div>
       <div class="SeasonalSeparator"></div>
     </div>
     <div class="LeftSeasonalContainer">
       <div class="LeftSeasonalImg">
-        <img
-          src="../Summer/SummerImg/Summer3.png"
-        />
+        <img src="../Summer/SummerImg/Summer3.png" />
       </div>
       <div class="LeftSeasonalContent">
         <p>
@@ -111,18 +87,14 @@
           of elegance and edge, making it suitable for various occasions.
         </p>
         <div class="RightSeasonalImg">
-          <img
-            src="../Summer/SummerImg/Summer2.png"
-          />
+          <img src="../Summer/SummerImg/Summer2.png" />
         </div>
       </div>
       <div class="SeasonalSeparator"></div>
     </div>
     <div class="LeftSeasonalContainer">
       <div class="LeftSeasonalImg">
-        <img
-          src="../Summer/SummerImg/Summer4.png"
-        />
+        <img src="../Summer/SummerImg/Summer4.png" />
       </div>
       <div class="LeftSeasonalContent">
         <p>lorem ipsum text about a blob I will finish later</p>
@@ -131,5 +103,20 @@
     <footer>
       <p>Copyright © 2017 All Rights Reserved by Aya Elfettahi.</p>
     </footer>
+    <script type="text/javascript">
+      var isSwitchOn = false; // Initialize the state
+
+      document
+        .getElementById("switchButton")
+        .addEventListener("click", function () {
+          isSwitchOn = !isSwitchOn; // Toggle the state
+
+          if (isSwitchOn) {
+            window.location = "../../LookBook/Fall/fall.html";
+          } else {
+            window.location = "index.html";
+          }
+        });
+    </script>
   </body>
 </html>
