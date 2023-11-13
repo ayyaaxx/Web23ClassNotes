@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Geolocation</title>
+    <script type="text/javascript">
+        // API KEY: DELETE BEFORE PUSHING TO GITHUB 
+        //AIzaSyBMHia3YWHsojMXBFV5oDcu6I2uJBj1NZA
+      document.addEventListener("DOMContentLoaded", getLocation);
+      function getLocation() {
+        //conditional to check if the users browser supports geolocation
+        if (navigator.geolocation) {
+          // geolocation exists! let's now use it to get our current location
+          //pass it in to a callback function
+          navigator.geolocation.getCurrentPosition(setPosition);
+        } else {
+          alert("Your browser does now support geolocation");
+        }
+      }
+
+      //getCurrentPosition is returning a geoposition object and we are passing it in to a callback function called setPosition
+
+      function setPosition(position) {
+        console.log(position.coords.latitude);
+        console.log(position.coords.longitude);
+
+        var lat = position.coords.latitude;
+        var lon = position.coords.longitude;
+        var loc = document.getElementById('location')
+
+        loc.innerHTML = 'Latitude: '+ lat + "<br /> longitude: " + lon 
+      }
+    </script>
+    <head>
+      <body>
+        <div id="location">
+          <p>Currently searching for location...</p>
+        </div>
+      </body>
+    </head>
+  </head>
+</html>
