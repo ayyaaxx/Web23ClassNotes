@@ -20,3 +20,5 @@ Final Progress: I want to update my midterm project through the implementation o
 [Website Inspiration5](https://www.vogue.fr/fashion/galerie/fashion-trends-fall-winter-2022-2023)
 
 
+https://rapidapi.com/chicmi/api/chicmi-local-fashion/details
+https://rapidapi.com/chicmi/api/chicmi-local-fashion/

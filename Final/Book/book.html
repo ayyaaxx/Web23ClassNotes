@@ -1,0 +1,140 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sliding Book Pages</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .book-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .book-page {
+      flex: 0 0 100vw;
+      height: 100vh;
+      box-sizing: border-box;
+      padding: 150px;
+    }
+
+    /* Add styles for each page */
+    .page-1 {
+      background-color: #ffcccb;
+    }
+
+    .page-2 {
+      background-color: #a0c4ff;
+    }
+
+    .page-3 {
+      background-color: #b3e0ff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="book-container">
+  <div class="book-page page-1">
+    <h1>Page 1</h1>
+    <p>This is the content of Page 1.</p>
+  </div>
+  <div class="book-page page-2">
+    <h1>Page 2</h1>
+    <p>This is the content of Page 2.</p>
+  </div>
+  <div class="book-page page-3">
+    <h1>Page 3</h1>
+    <p>This is the content of Page 3.</p>
+  </div>
+</div>
+
+<script>
+  let currentPage = 0;
+  const totalPages = document.querySelectorAll('.book-page').length;
+  const bookContainer = document.querySelector('.book-container');
+
+  document.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    if (event.target.classList.contains('book-container')) {
+      const direction = event.clientX < window.innerWidth / 2 ? -1 : 1;
+
+      if (currentPage + direction >= 0 && currentPage + direction < totalPages) {
+        currentPage += direction;
+        updateBook();
+      }
+    }
+  });
+
+  function updateBook() {
+    const translateValue = -currentPage * 100 + 'vw';
+    bookContainer.style.transform = `translateX(${translateValue})`;
+  }
+</script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Book Feature</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Page 1</div>
+            <div class="swiper-slide">Page 2</div>
+            <div class="swiper-slide">Page 3</div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>

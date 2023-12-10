@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+
 .headers a {
   text-decoration: none;
   color: black;
@@ -394,7 +395,6 @@ footer {
   transform: scale(1.1); 
   color: #fff; 
 }
-
 
 
 @media only screen and (max-width: 1024px) {
