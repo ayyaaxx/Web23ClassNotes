@@ -79,7 +79,7 @@
 </body>
 </html> -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -109,7 +109,7 @@
 </head>
 <body>
 
-    <!-- Swiper -->
+    Swiper
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">Page 1</div>
@@ -125,6 +125,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script>
+      
         var swiper = new Swiper('.swiper-container', {
             pagination: {
                 el: '.swiper-pagination',
@@ -136,5 +137,126 @@
             },
         });
     </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Book Feature</title>
+</head>
+<body>
+  <script>
+
+  const axios = require('axios');
+
+  const options = {
+    method: 'GET',
+    url: 'https://chicmi.p.rapidapi.com/calendar_in_city/',
+    params: {
+      city: 'london',
+      days: '5',
+      max_results: '3'
+    },
+    headers: {
+      'X-RapidAPI-Key': 'ee383e1581msh1864a74b21f9a6ep1b2983jsn64a71e2bfed5',
+      'X-RapidAPI-Host': 'chicmi.p.rapidapi.com'
+    }
+  };
+  
+  try {
+    const response =  axios.request(options);
+    console.log(response.data);
+  } catch (error) {
+    console.error(error);
+  }
+  </script>
+
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Book Feature</title>
+</head>
+<body>
+  <div id="apiData"></div>
+
+  <script>
+    const url = 'https://chicmi.p.rapidapi.com/calendar_in_city/?city=london&days=5&max_results=3';
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': 'ee383e1581msh1864a74b21f9a6ep1b2983jsn64a71e2bfed5',
+        'X-RapidAPI-Host': 'chicmi.p.rapidapi.com'
+      }
+    };
+
+    const apiDataElement = document.getElementById('apiData');
+
+    async function fetchData() {
+      try {
+        const response = await fetch(url, options);
+        const result = await response.text();
+        apiDataElement.innerText = result;
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    fetchData();
+  </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Book Feature</title>
+</head>
+<body>
+  <!-- Create a div to display the API data -->
+  <div id="apiData"></div>
+
+  <script>
+    const url = 'https://chicmi.p.rapidapi.com/calendar_in_city/?city=london&days=5&max_results=3';
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': 'ee383e1581msh1864a74b21f9a6ep1b2983jsn64a71e2bfed5',
+        'X-RapidAPI-Host': 'chicmi.p.rapidapi.com'
+      }
+    };
+
+    const apiDataElement = document.getElementById('apiData');
+
+    async function fetchData() {
+      try {
+        const response = await fetch(url, options);
+        const result = await response.json(); // Parse JSON data
+        // Access specific information using dot notation
+        const event = result.values.events[0];
+        
+        // Example: Display event name and start date
+        const eventInfo = `Event Name: ${event.event_name_en}, Start Date: ${event.start_date}`;
+        
+        // Update the content of the div with the specific API data
+        apiDataElement.innerText = eventInfo;
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    // Call the fetchData function when the script is executed
+    fetchData();
+  </script>
 </body>
 </html>
