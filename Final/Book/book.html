@@ -231,7 +231,7 @@
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': 'ee383e1581msh1864a74b21f9a6ep1b2983jsn64a71e2bfed5',
+        'X-RapidAPI-Key': '';
         'X-RapidAPI-Host': 'chicmi.p.rapidapi.com'
       }
     };
@@ -244,6 +244,7 @@
         const result = await response.json(); // Parse JSON data
         // Access specific information using dot notation
         const event = result.values.events[0];
+        console.log(event);
         
         // Example: Display event name and start date
         const eventInfo = `Event Name: ${event.event_name_en}, Start Date: ${event.start_date}`;
