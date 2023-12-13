@@ -1,263 +1,397 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sliding Book Pages</title>
-  <style>
-    body {
-      margin: 0;
-    }
-
-    .book-container {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .book-page {
-      flex: 0 0 100vw;
-      height: 100vh;
-      box-sizing: border-box;
-      padding: 150px;
-    }
-
-    /* Add styles for each page */
-    .page-1 {
-      background-color: #ffcccb;
-    }
-
-    .page-2 {
-      background-color: #a0c4ff;
-    }
-
-    .page-3 {
-      background-color: #b3e0ff;
-    }
-  </style>
-</head>
-<body>
-
-<div class="book-container">
-  <div class="book-page page-1">
-    <h1>Page 1</h1>
-    <p>This is the content of Page 1.</p>
-  </div>
-  <div class="book-page page-2">
-    <h1>Page 2</h1>
-    <p>This is the content of Page 2.</p>
-  </div>
-  <div class="book-page page-3">
-    <h1>Page 3</h1>
-    <p>This is the content of Page 3.</p>
-  </div>
-</div>
-
-<script>
-  let currentPage = 0;
-  const totalPages = document.querySelectorAll('.book-page').length;
-  const bookContainer = document.querySelector('.book-container');
-
-  document.addEventListener('click', (event) => {
-    event.preventDefault();
-
-    if (event.target.classList.contains('book-container')) {
-      const direction = event.clientX < window.innerWidth / 2 ? -1 : 1;
-
-      if (currentPage + direction >= 0 && currentPage + direction < totalPages) {
-        currentPage += direction;
-        updateBook();
-      }
-    }
-  });
-
-  function updateBook() {
-    const translateValue = -currentPage * 100 + 'vw';
-    bookContainer.style.transform = `translateX(${translateValue})`;
-  }
-</script>
-
-</body>
-</html> -->
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Book Feature</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-
-    <style>
-        .swiper-container {
-            width: 100%;
-            height: 100%;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body>
-
-    Swiper
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">Page 1</div>
-            <div class="swiper-slide">Page 2</div>
-            <div class="swiper-slide">Page 3</div>
-        </div>
-
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <script>
-      
-        var swiper = new Swiper('.swiper-container', {
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script>
-</body>
-</html> -->
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Book Feature</title>
-</head>
-<body>
-  <script>
-
-  const axios = require('axios');
-
-  const options = {
-    method: 'GET',
-    url: 'https://chicmi.p.rapidapi.com/calendar_in_city/',
-    params: {
-      city: 'london',
-      days: '5',
-      max_results: '3'
-    },
-    headers: {
-      'X-RapidAPI-Key': '',
-      'X-RapidAPI-Host': 'chicmi.p.rapidapi.com'
-    }
-  };
-  
-  try {
-    const response =  axios.request(options);
-    console.log(response.data);
-  } catch (error) {
-    console.error(error);
-  }
-  </script>
-
-</body>
-</html> -->
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Book Feature</title>
-</head>
-<body>
-  <div id="apiData"></div>
-
-  <script>
-    const url = 'https://chicmi.p.rapidapi.com/calendar_in_city/?city=london&days=5&max_results=3';
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': '',
-        'X-RapidAPI-Host': 'chicmi.p.rapidapi.com'
-      }
-    };
-
-    const apiDataElement = document.getElementById('apiData');
-
-    async function fetchData() {
-      try {
-        const response = await fetch(url, options);
-        const result = await response.text();
-        apiDataElement.innerText = result;
-      } catch (error) {
-        console.error(error);
-      }
-    }
-
-    fetchData();
-  </script>
-</body>
-</html> -->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Book Feature</title>
-</head>
-<body>
-  <!-- Create a div to display the API data -->
-  <div id="apiData"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <!-- <script src="./main.js" defer></script> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script>
-    const url = 'https://chicmi.p.rapidapi.com/calendar_in_city/?city=london&days=5&max_results=3';
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': '';
-        'X-RapidAPI-Host': 'chicmi.p.rapidapi.com'
+    <script
+      src="https://kit.fontawesome.com/b0f29e9bfe.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-    };
 
-    const apiDataElement = document.getElementById('apiData');
-
-    async function fetchData() {
-      try {
-        const response = await fetch(url, options);
-        const result = await response.json(); // Parse JSON data
-        // Access specific information using dot notation
-        const event = result.values.events[0];
-        console.log(event);
-        
-        // Example: Display event name and start date
-        const eventInfo = `Event Name: ${event.event_name_en}, Start Date: ${event.start_date}`;
-        
-        // Update the content of the div with the specific API data
-        apiDataElement.innerText = eventInfo;
-      } catch (error) {
-        console.error(error);
+      .hero-section {
+        background-image: url("../Img/Gray\ Minimalist\ Aesthetic\ Fashion\ Facebook\ Cover.png");
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+        padding: 350px 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8; /* Adjust the opacity level as needed */
+        z-index: -1;
       }
-    }
 
-    // Call the fetchData function when the script is executed
-    fetchData();
-  </script>
-</body>
+      .hero-section h1,
+      .hero-section p,
+      .hero-section a {
+        position: relative; /* Ensure the content stays on top */
+        z-index: 1;
+      }
+      .container-book {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: sans-serif;
+        background-color:rgb(248, 238, 238)
+      }
+      .display-1 {
+        color: black;
+      }
+      /* Book */
+      .book {
+        position: relative;
+        width: 350px;
+        height: 500px;
+        transition: transform 0.5s;
+      }
+
+      .paper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        perspective: 1500px;
+      }
+
+      .front,
+      .back {
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform-origin: left;
+        transition: transform 0.5s;
+      }
+
+      .front {
+        z-index: 1;
+        backface-visibility: hidden;
+        border-left: 3px solid powderblue;
+      }
+
+      .back {
+        z-index: 0;
+      }
+
+      .front-content,
+      .back-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .front-content img {
+        width: 300px;
+      }
+
+      .back-content {
+        transform: rotateY(180deg);
+      }
+
+      /* Paper flip effect */
+      .flipped .front,
+      .flipped .back {
+        transform: rotateY(-180deg);
+      }
+
+      /* Controller Buttons */
+      button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        margin: 10px;
+        transition: transform 0.5s;
+      }
+
+      button:focus {
+        outline: none;
+      }
+
+      button:hover i {
+        color: #636363;
+      }
+
+      i {
+        font-size: 50px;
+        color: gray;
+      }
+
+      /* Paper stack order */
+      #p1 {
+        z-index: 3;
+      }
+
+      #p2 {
+        z-index: 2;
+      }
+
+      #p3 {
+        z-index: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- BOOTSTRAP NAVBAR -->
+    <div
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: #e3f2fd"
+    >
+      <div class="container-fluid">
+        <a href="..//Home/index.html" class="navbar-brand">Aya's Lookbook</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="#navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle Navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav align-self-end px-4">
+            <li class="nav-item">
+              <a class="nav-link" href="../Home/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../FAQ/faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../EventsNearby/eventsNear.html"
+                >Events Nearby</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Book/book.html">LookBook</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                class="nav-link dropdown-toggle"
+              >
+                FashionLooks
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="../LookBook/Summer/summer.html"
+                    >Summer</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../LookBook/Fall/fall.html"
+                    >Fall</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../LookBook/Spring/spring.html"
+                    >Spring</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../LookBook/Winter/winter.html"
+                    >Winter</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <!-- <h1 class="display-1">Dive into my personal looks</h1> -->
+      <!-- <p class="lead">BurnBook</p> -->
+    </div>
+
+    <div class="container-book">
+      <!-- Previous Button -->
+      <button id="prev-btn">
+        <i class="fas fa-arrow-circle-left"></i>
+      </button>
+
+      <!-- Book -->
+      <div id="book" class="book">
+        <!-- Paper 1 -->
+        <div id="p1" class="paper">
+          <div class="front">
+            <div id="f1" class="front-content">
+              <!-- <h1>Front 1</h1> -->
+              <img src="../Img/IMG_0694.JPG" />
+            </div>
+          </div>
+          <div class="back">
+            <div id="b1" class="back-content">
+              <h1>Back 1</h1>
+            </div>
+          </div>
+        </div>
+        <!-- Paper 2 -->
+        <div id="p2" class="paper">
+          <div class="front">
+            <div id="f2" class="front-content">
+              <img src="../Img/IMG_2589.jpg" />
+
+            </div>
+          </div>
+          <div class="back">
+            <div id="b2" class="back-content">
+              <h1>Back 2</h1>
+            </div>
+          </div>
+        </div>
+        <!-- Paper 3 -->
+        <div id="p3" class="paper">
+          <div class="front">
+            <div id="f3" class="front-content">
+              <img src="../Img/79A8A3E0-3033-4F54-8B33-2BEEE84B235C.JPG">
+            </div>
+          </div>
+          <div class="back">
+            <div id="b3" class="back-content">
+              <h1>Back 3</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Next Button -->
+      <button id="next-btn">
+        <i class="fas fa-arrow-circle-right"></i>
+      </button>
+    </div>
+
+    <script>
+      // References to DOM Elements
+      const prevBtn = document.querySelector("#prev-btn");
+      const nextBtn = document.querySelector("#next-btn");
+      const book = document.querySelector("#book");
+
+      const paper1 = document.querySelector("#p1");
+      const paper2 = document.querySelector("#p2");
+      const paper3 = document.querySelector("#p3");
+
+      // Event Listener
+      prevBtn.addEventListener("click", goPrevPage);
+      nextBtn.addEventListener("click", goNextPage);
+
+      // Business Logic
+      let currentLocation = 1;
+      let numOfPapers = 3;
+      let maxLocation = numOfPapers + 1;
+
+      function openBook() {
+        book.style.transform = "translateX(50%)";
+        prevBtn.style.transform = "translateX(-180px)";
+        nextBtn.style.transform = "translateX(180px)";
+      }
+
+      function closeBook(isAtBeginning) {
+        if (isAtBeginning) {
+          book.style.transform = "translateX(0%)";
+        } else {
+          book.style.transform = "translateX(100%)";
+        }
+
+        prevBtn.style.transform = "translateX(0px)";
+        nextBtn.style.transform = "translateX(0px)";
+      }
+
+      function goNextPage() {
+        if (currentLocation < maxLocation) {
+          switch (currentLocation) {
+            case 1:
+              openBook();
+              paper1.classList.add("flipped");
+              paper1.style.zIndex = 1;
+              break;
+            case 2:
+              paper2.classList.add("flipped");
+              paper2.style.zIndex = 2;
+              break;
+            case 3:
+              paper3.classList.add("flipped");
+              paper3.style.zIndex = 3;
+              closeBook(false);
+              break;
+            default:
+              throw new Error("unkown state");
+          }
+          currentLocation++;
+        }
+      }
+
+      function goPrevPage() {
+        if (currentLocation > 1) {
+          switch (currentLocation) {
+            case 2:
+              closeBook(true);
+              paper1.classList.remove("flipped");
+              paper1.style.zIndex = 3;
+              break;
+            case 3:
+              paper2.classList.remove("flipped");
+              paper2.style.zIndex = 2;
+              break;
+            case 4:
+              openBook();
+              paper3.classList.remove("flipped");
+              paper3.style.zIndex = 1;
+              break;
+            default:
+              throw new Error("unkown state");
+          }
+
+          currentLocation--;
+        }
+      }
+    </script>
+  </body>
 </html>
+
+<!-- References to DOM Elements:
+
+References to various DOM elements are stored in variables, such as prevBtn, nextBtn, and book.
+Event Listeners:
+
+Event listeners are added to the previous and next buttons to trigger page navigation.
+Business Logic:
+
+The goNextPage and goPrevPage functions handle the logic for navigating between pages.
+The flipped class is added or removed to simulate the flipping effect.
+The currentLocation variable keeps track of the current page.
+Open and Close Book Functions:
+
+openBook and closeBook functions handle the animation of opening and closing the book, adjusting the transform property. -->
